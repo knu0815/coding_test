@@ -2,6 +2,8 @@ import math
 from collections import deque
 from typing import List
 import collections
+from ListNode import ListNode
+
 
 # URL:
 # https://leetcode.com/problems/palindrome-linked-list/

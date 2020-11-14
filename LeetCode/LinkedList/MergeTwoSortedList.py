@@ -1,5 +1,6 @@
 from typing import List
 import collections
+from ListNode import ListNode
 
 # URL:
 # https://leetcode.com/problems/merge-two-sorted-lists/
@@ -7,22 +8,6 @@ import collections
 # Question:
 # Merge two sorted linked lists and return it as a new sorted list.
 # The new list should be made by splicing together the nodes of the first two lists.
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    @classmethod
-    def list2linkedlist(cls, int_list: List[int]):
-        head = ListNode(int_list[0])
-        current = head
-        for num in int_list[1:]:
-            temp = ListNode(num)
-            current.next = temp
-            current = current.next
-        return head
 
 
 class MergeTwoSortedList:
@@ -38,10 +23,11 @@ class MergeTwoSortedList:
 
 
 def main():
-    h1 = ListNode.list2linkedlist([1, 2, 3, 2, 1])
+    h1 = ListNode.list2linkedlist([1, 2, 3, 4, 1])
     h2 = ListNode.list2linkedlist([1, 2, 4, 5, 1])
     # print(PalindromeLinkedList.my_solution(head))
-    print(MergeTwoSortedList.my_solution(h1, h2))
+    answer = MergeTwoSortedList.my_solution(h1, h2)
+    print(ListNode.linkedlist2list(answer))
 
 
 if __name__ == "__main__":
