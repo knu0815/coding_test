@@ -14,22 +14,6 @@ from ListNode import ListNode
 # Definition for singly-linked list.
 
 
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    @classmethod
-    def list2linkedlist(cls, int_list: List[int]):
-        head = ListNode(int_list[0])
-        current = head
-        for num in int_list[1:]:
-            temp = ListNode(num)
-            current.next = temp
-            current = current.next
-        return head
-
-
 # Runtime: 160 ms
 # Memory: 24.1 MB
 class PalindromeLinkedList:
